@@ -1,0 +1,85 @@
+/* NavBar.css */
+:root {
+    --primary-bg: #85DCB;
+    --secondary-bg: #E8A87C;
+    --accent-color: #E27D60;
+    --additional-color-1: #C38D9E;
+    --additional-color-2: #41B3A3;
+    --text-color: #333; /* For light mode */
+    --text-color-dark: #ddd; /* For dark mode */
+  }
+  
+  .navbar {
+    background-color: var(--primary-bg);
+    display: flex;
+    justify-content: center;
+  }
+  
+  .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Space between items */
+  }
+  
+  .nav-item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 0.5rem;
+    gap: 0.5rem; /* Space between icon and text */
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-item:hover,
+  .nav-item:focus {
+    background-color: var(--secondary-bg);
+  }
+  
+  .icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+  }
+  
+  .link-text {
+    display: block;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 0.5rem;
+    }
+  
+    .link-text {
+      display: none; /* Hide text on small screens */
+    }
+  
+    .nav-item {
+      padding: 0.5rem; /* Smaller padding on small screens */
+    }
+  
+    .nav-links {
+      gap: 0.5rem; /* Smaller gap on small screens */
+    }
+  }
+  
+  /* Dark mode styles */
+  .dark-mode .navbar {
+    background-color: var(--additional-color-2); /* Sea Green as background */
+    color: var(--text-color-dark);
+  }
+  
+  .dark-mode .nav-item {
+    color: var(--text-color-dark);
+  }
+  
+  .dark-mode .nav-item:hover,
+  .dark-mode .nav-item:focus {
+    background-color: var(--accent-color); /* Salmon Pink for hover/focus */
+  }
+  

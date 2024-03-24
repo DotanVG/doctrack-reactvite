@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* LoginPage styles */
+
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-form label {
+  margin-bottom: 5px;
+}
+
+.login-form input {
+  width: 200px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.login-form button {
+  padding: 5px 10px;
+  background-color: #008000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
