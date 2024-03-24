@@ -1,39 +1,78 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* LoginPage styles */
+/* LoginPage.css */
 
 .login-page {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  background-color: var(--primary-bg);
+  /* Use the background color from your color palette */
 }
 
 .login-form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  background-color: var(--secondary-bg);
+  /* Use the background color from your color palette */
+  padding: 2rem;
+  margin: 5rem auto auto auto;
+  /* Center the card in the viewport */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* A subtle shadow to lift the card off the background */
+  border-radius: 8px;
+  /* Slightly rounded corners for the card */
+  max-width: 400px;
+  /* Max width for the card */
+  width: 100%;
+  /* Make it responsive */
+  box-sizing: border-box;
+  /* Include padding and border in the width and height */
+
 }
 
 .login-form label {
-  margin-bottom: 5px;
+  margin-bottom: 0.5rem;
+  /* Adjust as needed */
 }
 
 .login-form input {
-  width: 200px;
-  padding: 5px;
-  margin-bottom: 10px;
+  width: calc(100% - 10px);
+  /* Full width of the card minus padding */
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  /* A subtle border for the inputs */
+  border-radius: 4px;
+  /* Slightly rounded borders for the inputs */
 }
 
 .login-form button {
-  padding: 5px 10px;
-  background-color: #008000;
+  padding: 0.5rem 1rem;
+  background-color: var(--accent-color);
+  /* Use the accent color from your palette */
   color: #fff;
   border: none;
   cursor: pointer;
+  border-radius: 4px;
+  /* Match the border radius of inputs */
+  font-weight: bold;
+  /* Optional: Make the button text bold */
+  text-transform: uppercase;
+  /* Optional: Uppercase button text */
+}
+
+/* Adjustments for dark mode if needed */
+.dark-mode .login-form {
+  background-color: var(--primary-bg);
+  /* Dark background for the form */
+  color: var(--text-color-dark);
+  /* Light text color for dark mode */
+}
+
+.dark-mode .login-form input,
+.dark-mode .login-form button {
+  border-color: #555;
+  /* Darker border for inputs and buttons in dark mode */
 }

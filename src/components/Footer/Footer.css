@@ -1,0 +1,16 @@
+.footer {
+    color: var(--text-color);
+    text-align: center;
+}
+
+.footer-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 768px) {
+    .footer-text {
+        font-size: 0.8rem;
+    }
+}

@@ -1,4 +1,37 @@
 /* App.css */
+
+/* Light mode root variables */
+:root {
+  --primary-bg: #F7FAFC;
+  /* White with a slight blue tint */
+  --secondary-bg: #E2E8F0;
+  /* Light grey */
+  --accent-color: #20C997;
+  /* Healing Green */
+  --additional-color-1: #6C757D;
+  /* Professional Grey */
+  --additional-color-2: #FFFFFF;
+  /* Clean White */
+  --text-color: #333;
+  /* Dark Grey for readability */
+}
+
+/* Dark mode root variables */
+.dark-mode {
+  --primary-bg: #2a3d45;
+  /* Darkened version of Primary Blue */
+  --secondary-bg: #5b3a29;
+  /* Darkened version of Secondary Blue */
+  --accent-color: #285943;
+  /* Darkened version of Accent Green */
+  --additional-color-1: #495057;
+  /* Darkened version of Neutral Grey */
+  --additional-color-2: #f8f9fa;
+  /* Lightened version of Background White */
+  --text-color: #ddd;
+  /* Light text color for dark backgrounds */
+}
+
 /* General styles */
 * {
   margin: 0;
@@ -6,53 +39,27 @@
   box-sizing: border-box;
 }
 
-html, body, #root {
-  height: 100%; /* Full height for root elements */
-  margin: 0;
+html,
+body,
+#root {
+  height: 100%;
+  /* Full height for root elements */
   font-family: sans-serif;
-}
-
-/* Light mode root variables */
-:root {
-  --primary-bg: #85DCB;
-  --secondary-bg: #E8A87C;
-  --accent-color: #E27D60;
-  --additional-color-1: #C38D9E;
-  --additional-color-2: #41B3A3;
-  --text-color: #333;
-}
-
-/* Dark mode root variables */
-.dark-mode {
-  --primary-bg: #2a3d45;
-  --secondary-bg: #5b3a29;
-  --accent-color: #73231d;
-  --additional-color-1: #2e1d2f;
-  --additional-color-2: #1f5f54;
-  --text-color: #ddd;
+  background-color: var(--primary-bg);
+  color: var(--text-color);
 }
 
 /* App container styles */
 .app-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensures the container takes at least full viewport height */
-  justify-content: space-between; /* Spaces children out so footer sits at bottom */
+  min-height: 100%;
+  /* Ensures the container takes at least full viewport height */
+  justify-content: space-between;
+  /* Spaces children out so footer sits at bottom */
 }
 
 .app-routes {
-  flex: 1; /* Takes up available space, pushing footer down */
-}
-
-/* Component specific styles can go here */
-
-/* Example: .navbar, .footer, etc. */
-/* Add these styles directly in the respective component's CSS file for modularity */
-
-/* Footer styles */
-.footer {
-  padding: 1rem 0;
-  text-align: center;
-  background-color: var(--secondary-bg); /* Styling footer with a secondary background color */
-  color: var(--text-color);
+  flex: 1;
+  /* Takes up available space, pushing footer down */
 }
