@@ -1,6 +1,7 @@
 .footer {
     color: var(--text-color);
     text-align: center;
+    padding: 20px;
 }
 
 .footer-text {
@@ -12,5 +13,17 @@
 @media (max-width: 768px) {
     .footer-text {
         font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .footer-text {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .footer-text {
+        font-size: 0.6rem;
     }
 }

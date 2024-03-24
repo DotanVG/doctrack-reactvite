@@ -60,6 +60,7 @@ body,
 }
 
 .app-routes {
+  margin-top: 5rem;
   flex: 1;
   /* Takes up available space, pushing footer down */
 }
