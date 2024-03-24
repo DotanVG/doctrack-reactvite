@@ -6,6 +6,16 @@
   justify-content: center;
 }
 
+.main-logo{
+  border: 2px solid var(--text-color);;
+  border-style: solid;
+  margin-right: 10px;
+}
+
+.main-logo-text{
+color: var(--text-color);
+}
+
 .nav-links {
   list-style: none;
   padding: 0;
@@ -38,6 +48,11 @@
   display: block;
   width: 64px;
   height: 64px;
+  color: var(--text-color);
+}
+
+.icon .dark-mode {
+  color: var(--text-color-dark)
 }
 
 .link-text {
@@ -45,6 +60,7 @@
   font-size: 1rem;
   font-weight: bold;
 }
+
 
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {

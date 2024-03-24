@@ -12,8 +12,8 @@
   /* Professional Grey */
   --additional-color-2: #FFFFFF;
   /* Clean White */
-  --text-color: #333;
-  /* Dark Grey for readability */
+  --text-color: #000000;
+  /* Black for readability */
 }
 
 /* Dark mode root variables */
