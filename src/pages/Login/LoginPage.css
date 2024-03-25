@@ -17,7 +17,7 @@
   background-color: var(--secondary-bg);
   /* Use the background color from your color palette */
   padding: 2rem;
-  margin: 5rem auto auto auto;
+  margin: 5rem auto 5rem auto;
   /* Center the card in the viewport */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   /* A subtle shadow to lift the card off the background */

@@ -111,13 +111,13 @@
 }
 
 @media (max-width: 600px) {
+  /* Show the hamburger icon only on screens smaller than 600px */
   .hamburger {
     display: block;
-    /* Show the hamburger icon only on screens smaller than 472px */
     position: absolute;
     top: 0;
     left: 0;
-    transform: translate(100%, 75%);
+    transform: translate(50%, 50%);
   }
 
   .navbar {
