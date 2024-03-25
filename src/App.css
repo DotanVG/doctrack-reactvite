@@ -1,42 +1,66 @@
+/* App.css */
+
+/* Light mode root variables */
+:root {
+  --primary-bg: #F7FAFC;
+  /* White with a slight blue tint */
+  --secondary-bg: #E2E8F0;
+  /* Light grey */
+  --accent-color: #20C997;
+  /* Healing Green */
+  --additional-color-1: #6C757D;
+  /* Professional Grey */
+  --additional-color-2: #FFFFFF;
+  /* Clean White */
+  --text-color: #000000;
+  /* Black for readability */
+}
+
+/* Dark mode root variables */
+.dark-mode {
+  --primary-bg: #2a3d45;
+  /* Darkened version of Primary Blue */
+  --secondary-bg: #5b3a29;
+  /* Darkened version of Secondary Blue */
+  --accent-color: #285943;
+  /* Darkened version of Accent Green */
+  --additional-color-1: #495057;
+  /* Darkened version of Neutral Grey */
+  --additional-color-2: #f8f9fa;
+  /* Lightened version of Background White */
+  --text-color: #ddd;
+  /* Light text color for dark backgrounds */
+}
+
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  height: 100%;
+  /* Full height for root elements */
+  font-family: sans-serif;
+  background-color: var(--primary-bg);
+  color: var(--text-color);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* App container styles */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  /* Ensures the container takes at least full viewport height */
+  justify-content: space-between;
+  /* Spaces children out so footer sits at bottom */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.app-routes {
+  margin-top: 1rem;
+  flex: 1;
+  /* Takes up available space, pushing footer down */
 }
