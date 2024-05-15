@@ -10,6 +10,10 @@ import "./NavBar.css";
 function NavBar() {
   const [isNavVisible, setIsNavVisible] = useState(false);
 
+  const closeMenu = () => {
+    setIsNavVisible(false);
+  };
+
   return (
     <nav className="navbar">
       <button className="hamburger" onClick={() => setIsNavVisible(!isNavVisible)}>
@@ -17,25 +21,25 @@ function NavBar() {
       </button>
       <ul className={`nav-links ${isNavVisible ? 'show' : ''}`}>
         <li>
-          <Link to="/" className="nav-item main-logo">
+          <Link to="/" className="nav-item main-logo" onClick={closeMenu}>
             <img src={DocTrackLogo} className="icon" alt="DocTrack Logo" />
             <span className="link-text main-logo-text">DocTrack</span>
           </Link>
         </li>
         <li>
-          <Link to="/doctors" className="nav-item">
+          <Link to="/doctors" className="nav-item" onClick={closeMenu}>
             <img src={DoctorIcon} className="icon" alt="Doctors" />
             <span className="link-text">Doctors</span>
           </Link>
         </li>
         <li>
-          <Link to="/appointments" className="nav-item">
+          <Link to="/appointments" className="nav-item" onClick={closeMenu}>
             <img src={AppointmentIcon} className="icon" alt="Appointments" />
             <span className="link-text">Appointments</span>
           </Link>
         </li>
         <li>
-          <Link to="/map" className="nav-item">
+          <Link to="/map" className="nav-item" onClick={closeMenu}>
             <img src={LocationIcon} className="icon" alt="Map" />
             <span className="link-text">Map</span>
           </Link>
